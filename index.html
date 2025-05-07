@@ -183,7 +183,11 @@
           <div class="container" data-aos="fade-up" data-aos-delay="100">
             <div class="row gy-4 justify-content-center">
               <div class="col-lg-4">
-                <img src="assets/img/profile-pic.jpg" class="img-fluid" alt="" />
+                <img
+                  src="assets/img/profile-pic.jpg"
+                  class="img-fluid"
+                  alt=""
+                />
               </div>
               <div class="col-lg-8 content">
                 <h2>Front-end Web Developer.</h2>
@@ -1002,6 +1006,15 @@
 
     <!-- Main JS File -->
     <script src="assets/js/main.js"></script>
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        const images = document.querySelectorAll('img:not([loading])');
+        images.forEach(img => {
+          img.setAttribute('loading', 'lazy');
+        });
+      });
+    </script>
+    
   </body>
 
   <!-- Mirrored from themewagon.github.io/iPortfolio/ by HTTrack Website Copier/3.x [XR&CO'2014], Wed, 19 Feb 2025 19:38:11 GMT -->
