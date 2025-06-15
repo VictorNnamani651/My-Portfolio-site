@@ -85,6 +85,7 @@
 
       <nav id="navmenu" class="navmenu">
         <ul>
+          <hr />
           <li>
             <a href="#hero" class="active"
               ><i class="bi bi-house navicon"></i>Home</a
@@ -94,8 +95,8 @@
             <a href="#about"><i class="bi bi-person navicon"></i> About</a>
           </li>
           <li>
-            <a href="#resume"
-              ><i class="bi bi-file-earmark-text navicon"></i> Resume</a
+            <a href="#resume" className="btn btn-outline-primary">
+              <i class="bi bi-file-earmark-text navicon"></i>Resume</a
             >
           </li>
           <li>
@@ -107,31 +108,6 @@
             <a href="#services"
               ><i class="bi bi-hdd-stack navicon"></i> Services</a
             >
-          </li>
-          <li class="dropdown">
-            <a href="#"
-              ><i class="bi bi-menu-button navicon"></i> <span>Dropdown</span>
-              <i class="bi bi-chevron-down toggle-dropdown"></i
-            ></a>
-            <ul>
-              <li><a href="#">Dropdown 1</a></li>
-              <li class="dropdown">
-                <a href="#"
-                  ><span>Deep Dropdown</span>
-                  <i class="bi bi-chevron-down toggle-dropdown"></i
-                ></a>
-                <ul>
-                  <li><a href="#">Deep Dropdown 1</a></li>
-                  <li><a href="#">Deep Dropdown 2</a></li>
-                  <li><a href="#">Deep Dropdown 3</a></li>
-                  <li><a href="#">Deep Dropdown 4</a></li>
-                  <li><a href="#">Deep Dropdown 5</a></li>
-                </ul>
-              </li>
-              <li><a href="#">Dropdown 2</a></li>
-              <li><a href="#">Dropdown 3</a></li>
-              <li><a href="#">Dropdown 4</a></li>
-            </ul>
           </li>
           <li>
             <a href="#contact"
@@ -312,6 +288,100 @@
         </div>
       </section>
       <!-- /Skills Section -->
+
+      <!-- Resume Section -->
+      <section id="resume" class="resume section">
+        <!-- Section Title -->
+        <div class="container section-title" data-aos="fade-up">
+          <h2>Resume</h2>
+        </div>
+        <!-- End Section Title -->
+
+        <div class="container">
+          <div class="row">
+            <div class="col-lg-6" data-aos="fade-up" data-aos-delay="100">
+              <h3 class="resume-title">Summary</h3>
+
+              <div class="resume-item pb-0">
+                <p>
+                  <em>
+                    Frontend Developer with experience as an intern at IDEaL,
+                    where I developed user interfaces that enhanced the user
+                    experience through HTML, CSS, and JavaScript frameworks.
+                    Collaborated with teams to deliver responsive web designs,
+                    resulting in improved cross-browser compatibility and user
+                    engagement. Seeking a Frontend Developer role to leverage
+                    skills in modern JavaScript frameworks and responsive design
+                    to create intuitive web applications</em
+                  >
+                </p>
+                <!-- <ul>
+                  <li>Asaba, Delta, Nigeria</li>
+                  <li>phone</li>
+                  <li>example@example.com</li>
+                </ul> -->
+              </div>
+              <!-- Edn Resume Item -->
+
+              <h3 class="resume-title">Education</h3>
+              <div class="resume-item">
+                <h4>Bachelor Of Science in Computer Science</h4>
+                <h5>2020 - 2024</h5>
+                <p>
+                  <em> Ebonyi State University • Ebonyi State, Nigeria. </em>
+                </p>
+              </div>
+              <!-- Edn Resume Item -->
+            </div>
+
+            <div class="col-lg-6" data-aos="fade-up" data-aos-delay="200">
+              <h3 class="resume-title">Professional Experience</h3>
+              <div class="resume-item">
+                <h4>Frontend Developer Intern at I.D.E.a.L</h4>
+                <h5>August 2022 - November 2022</h5>
+                <p><em> ASABA, DELTA STATE, NIGERIA</em></p>
+                <ul>
+                  <li>
+                    Designed and implemented user interfaces for web
+                    applications, enhancing user experience and interface
+                    responsiveness through effective use of HTML, CSS, and
+                    JavaScript frameworks.
+                  </li>
+                  <li>
+                    Collaborated with design and development teams to execute
+                    responsive web designs, ensuring cross-browser compatibility
+                    and improved user engagement across various devices.
+                  </li>
+                  <li>
+                    Integrated front-end solutions with RESTful APIs, ensuring
+                    seamless data flow and enhancing dynamic content rendering
+                    for an improved user experience.
+                  </li>
+                  <li>
+                    Refined front-end codebase by optimizing components and
+                    implementing responsive design principles, resulting in
+                    increased application performance and a more intuitive user
+                    interface.
+                  </li>
+                  <li>
+                    Contributed to the creation of interactive web interfaces,
+                    leveraging modern JavaScript frameworks to improve user
+                    engagement and ensure a responsive user experience across
+                    multiple platforms.
+                  </li>
+                  <li>
+                    Assisted in developing and testing user-centered web
+                    features, utilizing cutting-edge JavaScript frameworks to
+                    improve responsiveness and overall user interaction
+                  </li>
+                </ul>
+              </div>
+              <!-- Edn Resume Item -->
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- /Resume Section -->
 
       <!-- Projects Section -->
       <section id="portfolio" class="portfolio section light-background">
@@ -696,12 +766,6 @@
         <!-- Section Title -->
         <div class="container section-title" data-aos="fade-up">
           <h2>Services</h2>
-          <p>
-            Magnam dolores commodi suscipit. Necessitatibus eius consequatur ex
-            aliquid fuga eum quidem. Sit sint consectetur velit. Quisquam quos
-            quisquam cupiditate. Et nemo qui impedit suscipit alias ea. Quia
-            fugiat sit in iste officiis commodi quidem hic quas.
-          </p>
         </div>
         <!-- End Section Title -->
 
@@ -713,17 +777,19 @@
               data-aos-delay="100"
             >
               <div class="icon flex-shrink-0">
-                <i class="bi bi-briefcase"></i>
+                <i class="bi bi-code"></i>
               </div>
               <div>
                 <h4 class="title">
                   <a href="service-details.html" class="stretched-link"
-                    >Lorem Ipsum</a
+                    >Website Development</a
                   >
                 </h4>
                 <p class="description">
-                  Voluptatum deleniti atque corrupti quos dolores et quas
-                  molestias excepturi sint occaecati cupiditate non provident
+                  I build responsive and accessible websites from scratch using
+                  modern web technologies like HTML5, CSS3, and JavaScript.
+                  Whether it’s a simple landing page or a multi-page site, I
+                  ensure clean code and smooth user experience.
                 </p>
               </div>
             </div>
@@ -735,17 +801,18 @@
               data-aos-delay="200"
             >
               <div class="icon flex-shrink-0">
-                <i class="bi bi-card-checklist"></i>
+                <i class="bi bi-palette"></i>
               </div>
               <div>
                 <h4 class="title">
                   <a href="service-details.html" class="stretched-link"
-                    >Dolor Sitema</a
+                    >UI/UX Implementation</a
                   >
                 </h4>
                 <p class="description">
-                  Minim veniam, quis nostrud exercitation ullamco laboris nisi
-                  ut aliquip ex ea commodo consequat tarad limino ata
+                  I translate Figma or Adobe XD designs into pixel-perfect,
+                  interactive frontends. My focus is on bringing design concepts
+                  to life while maintaining performance and usability.
                 </p>
               </div>
             </div>
@@ -757,17 +824,18 @@
               data-aos-delay="300"
             >
               <div class="icon flex-shrink-0">
-                <i class="bi bi-bar-chart"></i>
+                <i class="bi bi-layers"></i>
               </div>
               <div>
                 <h4 class="title">
                   <a href="service-details.html" class="stretched-link"
-                    >Sed ut perspiciatis</a
+                    >Single Page Applications (SPAs)</a
                   >
                 </h4>
                 <p class="description">
-                  Duis aute irure dolor in reprehenderit in voluptate velit esse
-                  cillum dolore eu fugiat nulla pariatur
+                  I create dynamic and fast-loading SPAs using React.js. Ideal
+                  for dashboards, portfolios, or platforms requiring smooth
+                  navigation without full page reloads.
                 </p>
               </div>
             </div>
@@ -779,17 +847,18 @@
               data-aos-delay="400"
             >
               <div class="icon flex-shrink-0">
-                <i class="bi bi-binoculars"></i>
+                <i class="bi bi-rocket-takeoff"></i>
               </div>
               <div>
                 <h4 class="title">
                   <a href="service-details.html" class="stretched-link"
-                    >Magni Dolores</a
+                    >Performance Optimization</a
                   >
                 </h4>
                 <p class="description">
-                  Excepteur sint occaecat cupidatat non proident, sunt in culpa
-                  qui officia deserunt mollit anim id est laborum
+                  I audit and improve existing websites for speed, SEO, and user
+                  experience. This includes minimizing load times, cleaning up
+                  code, and ensuring best practices.
                 </p>
               </div>
             </div>
@@ -801,39 +870,17 @@
               data-aos-delay="500"
             >
               <div class="icon flex-shrink-0">
-                <i class="bi bi-brightness-high"></i>
+                <i class="bi bi-wrench"></i>
               </div>
               <div>
                 <h4 class="title">
                   <a href="service-details.html" class="stretched-link"
-                    >Nemo Enim</a
+                    >Website Maintenance</a
                   >
                 </h4>
                 <p class="description">
-                  At vero eos et accusamus et iusto odio dignissimos ducimus qui
-                  blanditiis praesentium voluptatum deleniti atque
-                </p>
-              </div>
-            </div>
-            <!-- End Service Item -->
-
-            <div
-              class="col-lg-4 col-md-6 service-item d-flex"
-              data-aos="fade-up"
-              data-aos-delay="600"
-            >
-              <div class="icon flex-shrink-0">
-                <i class="bi bi-calendar4-week"></i>
-              </div>
-              <div>
-                <h4 class="title">
-                  <a href="service-details.html" class="stretched-link"
-                    >Eiusmod Tempor</a
-                  >
-                </h4>
-                <p class="description">
-                  Et harum quidem rerum facilis est et expedita distinctio. Nam
-                  libero tempore, cum soluta nobis est eligendi
+                  Need regular updates or bug fixes? I offer ongoing support to
+                  keep your site secure, functional, and up to date.
                 </p>
               </div>
             </div>
@@ -848,10 +895,6 @@
         <!-- Section Title -->
         <div class="container section-title" data-aos="fade-up">
           <h2>Contact</h2>
-          <p>
-            Necessitatibus eius consequatur ex aliquid fuga eum quidem sint
-            consectetur velit
-          </p>
         </div>
         <!-- End Section Title -->
 
@@ -961,6 +1004,12 @@
                   </div>
 
                   <div class="col-md-12 text-center">
+                    <div class="loading d-none">Sending...</div>
+                    <div class="error-message d-none text-danger"></div>
+                    <div class="sent-message d-none text-success">
+                      Your message has been sent. Thank you!
+                    </div>
+
                     <button type="submit">Send Message</button>
                   </div>
                 </div>
@@ -1003,6 +1052,49 @@
         const images = document.querySelectorAll("img:not([loading])");
         images.forEach((img) => {
           img.setAttribute("loading", "lazy");
+        });
+      });
+    </script>
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        const form = document.querySelector(".php-email-form");
+        const loading = form.querySelector(".loading");
+        const errorMessage = form.querySelector(".error-message");
+        const sentMessage = form.querySelector(".sent-message");
+
+        form.addEventListener("submit", function (e) {
+          e.preventDefault();
+
+          // Show loading
+          loading.classList.remove("d-none");
+          errorMessage.classList.add("d-none");
+          sentMessage.classList.add("d-none");
+
+          const formData = new FormData(form);
+
+          fetch(form.action, {
+            method: "POST",
+            body: formData,
+            headers: { Accept: "application/json" },
+          })
+            .then((response) => {
+              loading.classList.add("d-none");
+              if (response.ok) {
+                sentMessage.classList.remove("d-none");
+                form.reset();
+              } else {
+                return response.json().then((data) => {
+                  throw new Error(
+                    data.errors?.[0]?.message || "Form submission failed"
+                  );
+                });
+              }
+            })
+            .catch((error) => {
+              loading.classList.add("d-none");
+              errorMessage.textContent = error.message;
+              errorMessage.classList.remove("d-none");
+            });
         });
       });
     </script>
