@@ -204,7 +204,6 @@
         <!-- Section Title -->
         <div class="container section-title" data-aos="fade-up">
           <h2>Skills</h2>
-          
         </div>
         <!-- End Section Title -->
 
@@ -780,6 +779,7 @@
         <div class="container section-title" data-aos="fade-up">
           <h2>Services</h2>
         </div>
+
         <!-- End Section Title -->
 
         <div class="container">
@@ -1028,10 +1028,14 @@
                 </div>
               </form>
             </div>
+
             <!-- End Contact Form -->
           </div>
         </div>
       </section>
+      <div id="toast-success" class="toast-message d-none">
+        ✅ Message sent successfully! We'll get back to you shortly.
+      </div>
       <!-- /Contact Section -->
     </main>
 
@@ -1093,7 +1097,15 @@
             .then((response) => {
               loading.classList.add("d-none");
               if (response.ok) {
-                sentMessage.classList.remove("d-none");
+                const toast = document.getElementById("toast-success");
+                toast.classList.remove("d-none");
+                setTimeout(() => toast.classList.add("show"), 100); // trigger animation
+
+                // Auto-hide after 4 seconds
+                setTimeout(() => {
+                  toast.classList.remove("show");
+                  setTimeout(() => toast.classList.add("d-none"), 500); // wait for fade-out
+                }, 4000);
                 form.reset();
               } else {
                 return response.json().then((data) => {
