@@ -1,10 +1,5 @@
 <!DOCTYPE html>
 <html lang="en">
-  <!-- Mirrored from themewagon.github.io/iPortfolio/ by HTTrack Website Copier/3.x [XR&CO'2014], Wed, 19 Feb 2025 19:37:30 GMT -->
-  <!-- Added by HTTrack --><meta
-    http-equiv="content-type"
-    content="text/html;charset=utf-8"
-  /><!-- /Added by HTTrack -->
   <head>
     <meta charset="utf-8" />
     <meta content="width=device-width, initial-scale=1.0" name="viewport" />
@@ -45,13 +40,151 @@
     <!-- Main CSS File -->
     <link href="assets/css/main.css" rel="stylesheet" />
 
-    <!-- =======================================================
-  * Template Name: iPortfolio
-  * Template URL: https://bootstrapmade.com/iportfolio-bootstrap-portfolio-websites-template/
-  * Updated: Jun 29 2024 with Bootstrap v5.3.3
-  * Author: BootstrapMade.com
-  * License: https://bootstrapmade.com/license/
-  ======================================================== -->
+    <style>
+      /* Resume Tabs Styling */
+      .resume-tabs {
+        border-bottom: 2px solid #e9ecef;
+        margin-bottom: 30px;
+        justify-content: center;
+        flex-wrap: wrap;
+      }
+
+      .resume-tabs .nav-link {
+        color: var(--default-color);
+        border: none;
+        border-bottom: 3px solid transparent;
+        padding: 12px 24px;
+        font-weight: 500;
+        transition: all 0.3s ease;
+        display: flex;
+        align-items: center;
+        gap: 8px;
+      }
+
+      .resume-tabs .nav-link:hover {
+        color: var(--accent-color);
+        border-bottom-color: color-mix(in srgb, var(--accent-color), transparent 50%);
+      }
+
+      .resume-tabs .nav-link.active {
+        color: var(--accent-color);
+        border-bottom-color: var(--accent-color);
+      }
+
+      .resume-tabs .nav-link i {
+        font-size: 1.1em;
+      }
+
+      .resume-tab-content {
+        min-height: 400px;
+        animation: fadeIn 0.4s ease-in;
+      }
+
+      @keyframes fadeIn {
+        from {
+          opacity: 0;
+          transform: translateY(10px);
+        }
+        to {
+          opacity: 1;
+          transform: translateY(0);
+        }
+      }
+
+      .resume-tab-content .resume-title {
+        font-size: 26px;
+        font-weight: 700;
+        margin-bottom: 20px;
+        color: var(--heading-color);
+      }
+
+      .resume-tab-content .resume-item {
+        padding: 0 0 20px 20px;
+        margin-top: -2px;
+        border-left: 2px solid var(--accent-color);
+        position: relative;
+      }
+
+      .resume-tab-content .resume-item::before {
+        content: "";
+        position: absolute;
+        width: 16px;
+        height: 16px;
+        border-radius: 50px;
+        left: -9px;
+        top: 0;
+        background: var(--background-color);
+        border: 2px solid var(--accent-color);
+      }
+
+      .resume-tab-content .resume-item h4 {
+        line-height: 18px;
+        font-size: 18px;
+        font-weight: 600;
+        font-family: var(--heading-font);
+        color: var(--heading-color);
+        margin-bottom: 10px;
+      }
+
+      .resume-tab-content .resume-item h5 {
+        font-size: 16px;
+        padding: 5px 15px;
+        display: inline-block;
+        font-weight: 600;
+        margin-bottom: 10px;
+        background: color-mix(in srgb, var(--accent-color), transparent 90%);
+      }
+
+      .resume-tab-content .resume-item .project-name {
+        font-weight: 600;
+        margin-bottom: 10px;
+        color: var(--accent-color);
+      }
+
+      .resume-tab-content .resume-item ul {
+        padding-left: 20px;
+      }
+
+      .resume-tab-content .resume-item ul li {
+        padding-bottom: 10px;
+      }
+
+      @media (max-width: 768px) {
+        .resume-tabs .nav-link {
+          font-size: 14px;
+          padding: 10px 16px;
+        }
+
+        .resume-tabs .nav-link i {
+          font-size: 1em;
+        }
+      }
+
+      /* Download Resume Button */
+      .download-resume-btn {
+        background-color: var(--accent-color);
+        color: white;
+        padding: 12px 35px;
+        border-radius: 50px;
+        text-decoration: none;
+        display: inline-flex;
+        align-items: center;
+        gap: 10px;
+        transition: all 0.3s ease;
+        font-weight: 500;
+        box-shadow: 0 4px 15px rgba(20, 157, 221, 0.3);
+      }
+      .download-resume-btn:hover {
+        background-color: color-mix(in srgb, var(--accent-color), black 15%);
+        transform: translateY(-2px);
+        box-shadow: 0 6px 20px rgba(20, 157, 221, 0.4);
+        color: white;
+        text-decoration: none;
+      }
+      .download-resume-btn i {
+        font-size: 1.1em;
+      }
+    </style>
   </head>
 
   <body class="index-page">
@@ -70,8 +203,6 @@
         href="index.html"
         class="logo d-flex align-items-center justify-content-center"
       >
-        <!-- Uncomment the line below if you also wish to use an image logo -->
-        <!-- <img src="assets/img/logo.png" alt=""> -->
         <h1 class="sitename">Victor Nnamani</h1>
       </a>
 
@@ -87,7 +218,6 @@
           class="instagram"
           ><i class="bi bi-instagram"></i
         ></a>
-
         <a
           href="https://www.linkedin.com/in/victor-nnamani-833251233?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app"
           class="linkedin"
@@ -148,8 +278,8 @@
             I'm a
             <span
               class="typed"
-              data-typed-items="Front-end Developer, Freelancer"
-              >Front-end Developer</span
+              data-typed-items="Full-Stack Developer, Web Developer, Freelancer"
+              >Full-Stack Developer</span
             ><span
               class="typed-cursor typed-cursor--blink"
               aria-hidden="true"
@@ -165,7 +295,6 @@
 
       <!-- About Section -->
       <section id="about" class="about section">
-        <!-- Section Title -->
         <div class="container section-title" data-aos="fade-up">
           <h2>About</h2>
           <div class="container" data-aos="fade-up" data-aos-delay="100">
@@ -178,19 +307,9 @@
                 />
               </div>
               <div class="col-lg-8 content">
-                <h2>Front-end Web Developer.</h2>
+                <h2>Full-Stack Web Developer.</h2>
                 <p class="fst-italic py-3">
-                  Hey, I’m a frontend developer with a focus on building clean,
-                  intuitive, and responsive user interfaces. I care deeply about
-                  the user experience and love turning ideas into functional,
-                  visually polished web apps. Whether I’m working with modern
-                  JavaScript frameworks, crafting reusable components, or
-                  bringing designs to life with pixel precision, I’m all about
-                  code that not only works well but feels good to use. I’m
-                  constantly exploring new tools and techniques to stay sharp
-                  and push what I can build on the web. At the end of the day,
-                  I’m here to solve problems and create things that people
-                  actually enjoy using.
+                  Hey, I'm a full-stack developer specializing in building production-ready web applications with Next.js, React, and TypeScript. I excel at architecting complete solutions from database design to polished user interfaces, with expertise in authentication systems, API development, real-time data integration, and cloud infrastructure. Recently, I independently built CashCognizance, a comprehensive cryptocurrency analytics platform featuring automated PDF reporting, AI-powered content generation, and secure user management. I care deeply about clean code architecture, performance optimization, and creating applications that are both technically robust and enjoyable to use. Whether I'm implementing complex backend logic with PostgreSQL, designing intuitive dashboards, or integrating third-party APIs, I approach each challenge with attention to detail and a commitment to delivering scalable, maintainable solutions. I'm constantly exploring emerging technologies and best practices to stay at the forefront of web development.
                 </p>
               </div>
             </div>
@@ -201,11 +320,9 @@
 
       <!-- Skills Section -->
       <section id="skills" class="skills section light-background">
-        <!-- Section Title -->
         <div class="container section-title" data-aos="fade-up">
           <h2>Skills</h2>
         </div>
-        <!-- End Section Title -->
 
         <div class="container" data-aos="fade-up" data-aos-delay="100">
           <div class="row skills-content skills-animation">
@@ -224,7 +341,6 @@
                   ></div>
                 </div>
               </div>
-              <!-- End Skills Item -->
 
               <div class="progress">
                 <span class="skill"
@@ -240,7 +356,6 @@
                   ></div>
                 </div>
               </div>
-              <!-- End Skills Item -->
 
               <div class="progress">
                 <span class="skill"
@@ -256,7 +371,21 @@
                   ></div>
                 </div>
               </div>
-              <!-- End Skills Item -->
+
+              <div class="progress">
+                <span class="skill"
+                  ><span>Node.js</span> <i class="val">80%</i></span
+                >
+                <div class="progress-bar-wrap">
+                  <div
+                    class="progress-bar"
+                    role="progressbar"
+                    aria-valuenow="80"
+                    aria-valuemin="0"
+                    aria-valuemax="100"
+                  ></div>
+                </div>
+              </div>
             </div>
 
             <div class="col-lg-6">
@@ -274,7 +403,6 @@
                   ></div>
                 </div>
               </div>
-              <!-- End Skills Item -->
 
               <div class="progress">
                 <span class="skill"
@@ -290,7 +418,51 @@
                   ></div>
                 </div>
               </div>
-              <!-- End Skills Item -->
+
+              <div class="progress">
+                <span class="skill"
+                  ><span>Next.js</span> <i class="val">75%</i></span
+                >
+                <div class="progress-bar-wrap">
+                  <div
+                    class="progress-bar"
+                    role="progressbar"
+                    aria-valuenow="75"
+                    aria-valuemin="0"
+                    aria-valuemax="100"
+                  ></div>
+                </div>
+              </div>
+
+              <div class="progress">
+                <span class="skill"
+                  ><span>TypeScript</span> <i class="val">80%</i></span
+                >
+                <div class="progress-bar-wrap">
+                  <div
+                    class="progress-bar"
+                    role="progressbar"
+                    aria-valuenow="80"
+                    aria-valuemin="0"
+                    aria-valuemax="100"
+                  ></div>
+                </div>
+              </div>
+
+              <div class="progress">
+                <span class="skill"
+                  ><span>PostgreSQL</span> <i class="val">75%</i></span
+                >
+                <div class="progress-bar-wrap">
+                  <div
+                    class="progress-bar"
+                    role="progressbar"
+                    aria-valuenow="75"
+                    aria-valuemin="0"
+                    aria-valuemax="100"
+                  ></div>
+                </div>
+              </div>
             </div>
           </div>
         </div>
@@ -299,93 +471,167 @@
 
       <!-- Resume Section -->
       <section id="resume" class="resume section">
-        <!-- Section Title -->
         <div class="container section-title" data-aos="fade-up">
           <h2>Resume</h2>
+          <p style="text-align: center; margin-top: 15px;">
+            <a href="assets/Victor-Nnamani-CV.pdf" download="Victor-Nnamani-CV.pdf" class="download-resume-btn">
+              <i class="bi bi-download"></i> Download Full Resume (PDF)
+            </a>
+          </p>
         </div>
-        <!-- End Section Title -->
 
-        <div class="container">
-          <div class="row">
-            <div class="col-lg-6" data-aos="fade-up" data-aos-delay="100">
-              <h3 class="resume-title">Summary</h3>
+        <div class="container" data-aos="fade-up" data-aos-delay="100">
+          <!-- Resume Tabs Navigation -->
+          <ul class="nav nav-tabs resume-tabs" id="resumeTabs" role="tablist">
+            <li class="nav-item" role="presentation">
+              <button class="nav-link active" id="experience-tab" data-bs-toggle="tab" data-bs-target="#experience" type="button" role="tab" aria-controls="experience" aria-selected="true">
+                <i class="bi bi-briefcase"></i> Experience
+              </button>
+            </li>
+            <li class="nav-item" role="presentation">
+              <button class="nav-link" id="summary-tab" data-bs-toggle="tab" data-bs-target="#summary" type="button" role="tab" aria-controls="summary" aria-selected="false">
+                <i class="bi bi-person"></i> Summary
+              </button>
+            </li>
+            <li class="nav-item" role="presentation">
+              <button class="nav-link" id="education-tab" data-bs-toggle="tab" data-bs-target="#education" type="button" role="tab" aria-controls="education" aria-selected="false">
+                <i class="bi bi-mortarboard"></i> Education
+              </button>
+            </li>
+            <li class="nav-item" role="presentation">
+              <button class="nav-link" id="skills-tab" data-bs-toggle="tab" data-bs-target="#skills-resume" type="button" role="tab" aria-controls="skills-resume" aria-selected="false">
+                <i class="bi bi-code-square"></i> Skills
+              </button>
+            </li>
+          </ul>
 
+          <!-- Resume Tabs Content -->
+          <div class="tab-content resume-tab-content" id="resumeTabContent">
+            
+            <!-- Experience Tab - Shown First -->
+            <div class="tab-pane fade show active" id="experience" role="tabpanel" aria-labelledby="experience-tab">
+              <h3 class="resume-title">Professional Experience</h3>
+
+              <!-- Rheingold Position -->
+              <div class="resume-item">
+                <h4>Full-Stack Developer</h4>
+                <h5>2025 - Present</h5>
+                <p><em>Rheingold (Remote)</em></p>
+                
+                <p class="project-name"><strong>CashCognizance Platform</strong></p>
+                <ul>
+                  <li>Architected and deployed CashCognizance, a full-stack cryptocurrency analytics platform serving real-time market data, automated reporting, and AI-powered content generation to retail crypto investors.</li>
+                  <li>Built comprehensive Next.js 16 application with TypeScript, implementing server-side rendering, 25+ RESTful API endpoints, and PostgreSQL database for user management, newsletters, and analytics tracking.</li>
+                  <li>Developed secure authentication system using NextAuth v4 with role-based access control, bcrypt password hashing, and middleware protection for admin routes.</li>
+                  <li>Engineered automated PDF report generation system using React-PDF with dynamic chart rendering, Vercel Blob storage integration, and secure access control for 30+ historical reports.</li>
+                  <li>Built AI-powered tweet engine with dual-access system generating market analysis content and SVG-based branded images with sentiment-based styling.</li>
+                </ul>
+
+                <p class="project-name"><strong>MediaVeed UI Overhaul Project (December 2025 - January 2026)</strong></p>
+                <ul>
+                  <li>Assigned to rescue failing pre-launch product by completely overhauling the UI/UX of a React + Vite + Laravel video processing application under extreme time pressure and tight deadline.</li>
+                  <li>Redesigned entire navigation system from ground up, converting problematic slider-based navigation to professional multi-dropdown architecture with active state management.</li>
+                  <li>Architected comprehensive mobile responsiveness: implemented auto-hiding navbar on scroll, full-width static dropdowns, WCAG 2.1 compliant 44px touch targets, and custom scrollbar styling.</li>
+                  <li>Delivered 30+ commits over 3 weeks with zero breaking changes to existing functionality. Tech stack: React 19, Vite, Bootstrap 5.3, React Bootstrap, Lucide React.</li>
+                </ul>
+
+              </div>
+
+              <!-- Freelance Position -->
+              <div class="resume-item">
+                <h4>Freelance Frontend Developer</h4>
+                <h5>January 2024 - Present</h5>
+                <p><em>Remote & On-Site</em></p>
+                <ul>
+                  <li>Built responsive landing pages and marketing sites for small businesses using React and Tailwind CSS.</li>
+                  <li>Worked with real clients to refine UI/UX and improve conversion performance.</li>
+                </ul>
+
+                <p class="project-name"><strong>Joesy Housing Estate Website (2024)</strong></p>
+                <ul>
+                  <li>Developed comprehensive multi-page real estate website for Joesy Housing Estate, a full-service property management company offering real estate investment, development, consultancy, and additional services.</li>
+                  <li>Built responsive, mobile-first website using React 19, React Router, Tailwind CSS 4, and Vite with smooth page transitions, animated UI elements using Framer Motion and AOS library.</li>
+                  <li>Implemented custom typewriter effect welcome animation with session-based rendering optimization, creating engaging first-time user experience without repetitive loading.</li>
+                  <li>Created dynamic navigation system with dropdown menus, active state management, hover effects with delayed closing, and fully responsive mobile hamburger menu with Framer Motion animations.</li>
+                  <li>Designed and developed 6 main pages: Landing/Home, Who We Are (company overview), Founder Profile, Services (10 service categories), Contact Us, and integrated features including hero sections, about sections, service cards, founder biography, and map integration.</li>
+                  <li>Integrated Google Maps API for interactive office location display and Formspree contact form with validation, loading states, success/error handling for client communications.</li>
+                  <li>Built services showcase featuring 10+ service categories including Real Estate Investment, Property Development, Management, Consultancy, Agency services, Event Management, Building Materials Supply, Cleaning Services, and Car Rentals with custom icons, descriptions, and feature tags.</li>
+                  <li>Implemented comprehensive FAQ section with accordion functionality, smooth expand/collapse animations, and hover effects for enhanced user experience.</li>
+                  <li>Optimized images with WebP format for faster loading, implemented custom CSS for hero sections with responsive background images, and integrated social media links (Instagram, Facebook) with hover effects throughout the site.</li>
+                </ul>
+              </div>
+
+              <!-- I.D.E.A.L Internship -->
+              <div class="resume-item">
+                <h4>Web Developer Intern</h4>
+                <h5>August 2022 - September 2023</h5>
+                <p><em>I.D.E.A.L (Asaba, Delta State, Nigeria)</em></p>
+                <ul>
+                  <li>Developed and maintained web applications using HTML5, CSS3, JavaScript, and React, contributing to multiple client projects throughout the internship.</li>
+                  <li>Implemented responsive user interfaces and reusable component libraries, ensuring cross-browser compatibility and optimal user experience across desktop and mobile devices.</li>
+                  <li>Integrated RESTful APIs with frontend applications, implementing proper error handling, loading states, and dynamic data rendering for enhanced interactivity.</li>
+                  <li>Collaborated with senior developers and design teams to implement WCAG-compliant accessibility features and maintain consistency with brand design systems.</li>
+                </ul>
+              </div>
+            </div>
+
+            <!-- Summary Tab -->
+            <div class="tab-pane fade" id="summary" role="tabpanel" aria-labelledby="summary-tab">
+              <h3 class="resume-title">Professional Summary</h3>
               <div class="resume-item pb-0">
                 <p>
                   <em>
-                    Frontend Developer with experience as an intern at IDEaL,
-                    where I developed user interfaces that enhanced the user
-                    experience through HTML, CSS, and JavaScript frameworks.
-                    Collaborated with teams to deliver responsive web designs,
-                    resulting in improved cross-browser compatibility and user
-                    engagement. Seeking a Frontend Developer role to leverage
-                    skills in modern JavaScript frameworks and responsive design
-                    to create intuitive web applications</em
-                  >
+                    Fast learner and passionate Full-Stack Developer with experience building scalable, accessible, and visually engaging web applications using React, Next.js, TypeScript, and modern frameworks. Proficient in both frontend development and backend architecture including RESTful APIs, database design, authentication systems, and cloud deployment. Adept at translating design systems into performant, maintainable interfaces and collaborating in Agile teams to deliver user-focused solutions that drive business growth.
+                  </em>
                 </p>
-                <!-- <ul>
-                  <li>Asaba, Delta, Nigeria</li>
-                  <li>phone</li>
-                  <li>example@example.com</li>
-                </ul> -->
               </div>
-              <!-- Edn Resume Item -->
+            </div>
 
+            <!-- Education Tab -->
+            <div class="tab-pane fade" id="education" role="tabpanel" aria-labelledby="education-tab">
               <h3 class="resume-title">Education</h3>
               <div class="resume-item">
-                <h4>Bachelor Of Science in Computer Science</h4>
-                <h5>2020 - 2024</h5>
-                <p>
-                  <em> Ebonyi State University • Ebonyi State, Nigeria. </em>
-                </p>
+                <h4>Bachelor of Science in Computer Science</h4>
+                <h5>2020 - 2023</h5>
+                <p><em>Ebonyi State University • Ebonyi State, Nigeria</em></p>
               </div>
-              <!-- Edn Resume Item -->
             </div>
 
-            <div class="col-lg-6" data-aos="fade-up" data-aos-delay="200">
-              <h3 class="resume-title">Professional Experience</h3>
+            <!-- Skills Tab -->
+            <div class="tab-pane fade" id="skills-resume" role="tabpanel" aria-labelledby="skills-tab">
+              <h3 class="resume-title">Technical Skills</h3>
+              
               <div class="resume-item">
-                <h4>Frontend Developer Intern at I.D.E.a.L</h4>
-                <h5>August 2022 - November 2022</h5>
-                <p><em> ASABA, DELTA STATE, NIGERIA</em></p>
-                <ul>
-                  <li>
-                    Designed and implemented user interfaces for web
-                    applications, enhancing user experience and interface
-                    responsiveness through effective use of HTML, CSS, and
-                    JavaScript frameworks.
-                  </li>
-                  <li>
-                    Collaborated with design and development teams to execute
-                    responsive web designs, ensuring cross-browser compatibility
-                    and improved user engagement across various devices.
-                  </li>
-                  <li>
-                    Integrated front-end solutions with RESTful APIs, ensuring
-                    seamless data flow and enhancing dynamic content rendering
-                    for an improved user experience.
-                  </li>
-                  <li>
-                    Refined front-end codebase by optimizing components and
-                    implementing responsive design principles, resulting in
-                    increased application performance and a more intuitive user
-                    interface.
-                  </li>
-                  <li>
-                    Contributed to the creation of interactive web interfaces,
-                    leveraging modern JavaScript frameworks to improve user
-                    engagement and ensure a responsive user experience across
-                    multiple platforms.
-                  </li>
-                  <li>
-                    Assisted in developing and testing user-centered web
-                    features, utilizing cutting-edge JavaScript frameworks to
-                    improve responsiveness and overall user interaction
-                  </li>
-                </ul>
+                <h4>Languages / Technologies</h4>
+                <p>React, Next.js, React Native, TypeScript, JavaScript (ES6+), HTML5, CSS3, Tailwind CSS, Bootstrap, Vite</p>
               </div>
-              <!-- Edn Resume Item -->
+
+              <div class="resume-item">
+                <h4>Frontend Development</h4>
+                <p>Component-Based Architecture, Responsive & Mobile-First Design, State Management (useState, Context API, Redux), Form Handling & Validation, Performance Optimization, Framer Motion, Animation Libraries</p>
+              </div>
+
+              <div class="resume-item">
+                <h4>Backend Integration</h4>
+                <p>RESTful API Design & Development, PostgreSQL, NextAuth, Node.js, Vercel Serverless Functions, Database Design, Appwrite, Async/Await, Fetch</p>
+              </div>
+
+              <div class="resume-item">
+                <h4>Authentication & Security</h4>
+                <p>NextAuth v4, Role-Based Access Control (RBAC), bcrypt Password Hashing, Secure Login/Logout Flows, Session Management, Input Validation, Error Handling</p>
+              </div>
+
+              <div class="resume-item">
+                <h4>Tools & Deployment</h4>
+                <p>Git, GitHub, Vite, Webpack, npm, Yarn, VS Code, Jest, React Testing Library, Netlify, Vercel, CI/CD Basics</p>
+              </div>
+
+              <div class="resume-item">
+                <h4>UI/UX Design</h4>
+                <p>Accessibility (WCAG), Modern UI Design, Navigation & Routing (React Router / React Navigation), User-Centered Design, Animation & Motion Design</p>
+              </div>
             </div>
+
           </div>
         </div>
       </section>
@@ -393,11 +639,9 @@
 
       <!-- Projects Section -->
       <section id="portfolio" class="portfolio section light-background">
-        <!-- Section Title -->
         <div class="container section-title" data-aos="fade-up">
           <h2>Projects</h2>
         </div>
-        <!-- End Section Title -->
 
         <div
           class="row gy-4 isotope-container"
@@ -432,7 +676,6 @@
               </div>
             </div>
           </div>
-          <!-- End Portfolio Item -->
 
           <div
             class="col-lg-4 col-md-6 portfolio-item isotope-item filter-product"
@@ -464,7 +707,6 @@
               </div>
             </div>
           </div>
-          <!-- End Portfolio Item -->
 
           <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-app">
             <div class="portfolio-content h-100">
@@ -494,7 +736,6 @@
               </div>
             </div>
           </div>
-          <!-- End Portfolio Item -->
 
           <div
             class="col-lg-4 col-md-6 portfolio-item isotope-item filter-books"
@@ -526,7 +767,6 @@
               </div>
             </div>
           </div>
-          <!-- End Portfolio Item -->
 
           <div
             class="col-lg-4 col-md-6 portfolio-item isotope-item filter-branding"
@@ -558,229 +798,15 @@
               </div>
             </div>
           </div>
-          <!-- End Portfolio Item -->
-
-          <!-- <div
-            class="col-lg-4 col-md-6 portfolio-item isotope-item filter-product"
-          >
-            <div class="portfolio-content h-100">
-              <img
-                src="assets/img/portfolio/product-2.jpg"
-                class="img-fluid"
-                alt=""
-              />
-              <div class="portfolio-info">
-                <h4>Product 2</h4>
-                <p>Lorem ipsum, dolor sit amet consectetur</p>
-                <a
-                  href="assets/img/portfolio/product-2.jpg"
-                  title="Product 2"
-                  data-gallery="portfolio-gallery-product"
-                  class="glightbox preview-link"
-                  ><i class="bi bi-zoom-in"></i
-                ></a>
-                <a
-                  href="portfolio-details.html"
-                  title="More Details"
-                  class="details-link"
-                  ><i class="bi bi-link-45deg"></i
-                ></a>
-              </div>
-            </div>
-          </div> -->
-          <!-- End Portfolio Item -->
-
-          <!-- <div
-            class="col-lg-4 col-md-6 portfolio-item isotope-item filter-branding"
-          >
-            <div class="portfolio-content h-100">
-              <img
-                src="assets/img/portfolio/branding-2.jpg"
-                class="img-fluid"
-                alt=""
-              />
-              <div class="portfolio-info">
-                <h4>Branding 2</h4>
-                <p>Lorem ipsum, dolor sit amet consectetur</p>
-                <a
-                  href="assets/img/portfolio/branding-2.jpg"
-                  title="Branding 2"
-                  data-gallery="portfolio-gallery-branding"
-                  class="glightbox preview-link"
-                  ><i class="bi bi-zoom-in"></i
-                ></a>
-                <a
-                  href="portfolio-details.html"
-                  title="More Details"
-                  class="details-link"
-                  ><i class="bi bi-link-45deg"></i
-                ></a>
-              </div>
-            </div>
-          </div> -->
-          <!-- End Portfolio Item -->
-
-          <!-- <div
-            class="col-lg-4 col-md-6 portfolio-item isotope-item filter-books"
-          >
-            <div class="portfolio-content h-100">
-              <img
-                src="assets/img/portfolio/books-2.jpg"
-                class="img-fluid"
-                alt=""
-              />
-              <div class="portfolio-info">
-                <h4>Books 2</h4>
-                <p>Lorem ipsum, dolor sit amet consectetur</p>
-                <a
-                  href="assets/img/portfolio/books-2.jpg"
-                  title="Branding 2"
-                  data-gallery="portfolio-gallery-book"
-                  class="glightbox preview-link"
-                  ><i class="bi bi-zoom-in"></i
-                ></a>
-                <a
-                  href="portfolio-details.html"
-                  title="More Details"
-                  class="details-link"
-                  ><i class="bi bi-link-45deg"></i
-                ></a>
-              </div>
-            </div>
-          </div> -->
-          <!-- End Portfolio Item -->
-
-          <!-- <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-app">
-            <div class="portfolio-content h-100">
-              <img
-                src="assets/img/portfolio/app-3.jpg"
-                class="img-fluid"
-                alt=""
-              />
-              <div class="portfolio-info">
-                <h4>App 3</h4>
-                <p>Lorem ipsum, dolor sit amet consectetur</p>
-                <a
-                  href="assets/img/portfolio/app-3.jpg"
-                  title="App 3"
-                  data-gallery="portfolio-gallery-app"
-                  class="glightbox preview-link"
-                  ><i class="bi bi-zoom-in"></i
-                ></a>
-                <a
-                  href="portfolio-details.html"
-                  title="More Details"
-                  class="details-link"
-                  ><i class="bi bi-link-45deg"></i
-                ></a>
-              </div>
-            </div>
-          </div> -->
-          <!-- End Portfolio Item -->
-
-          <!-- <div
-            class="col-lg-4 col-md-6 portfolio-item isotope-item filter-product"
-          >
-            <div class="portfolio-content h-100">
-              <img
-                src="assets/img/portfolio/product-3.jpg"
-                class="img-fluid"
-                alt=""
-              />
-              <div class="portfolio-info">
-                <h4>Product 3</h4>
-                <p>Lorem ipsum, dolor sit amet consectetur</p>
-                <a
-                  href="assets/img/portfolio/product-3.jpg"
-                  title="Product 3"
-                  data-gallery="portfolio-gallery-product"
-                  class="glightbox preview-link"
-                  ><i class="bi bi-zoom-in"></i
-                ></a>
-                <a
-                  href="portfolio-details.html"
-                  title="More Details"
-                  class="details-link"
-                  ><i class="bi bi-link-45deg"></i
-                ></a>
-              </div>
-            </div>
-          </div> -->
-          <!-- End Portfolio Item -->
-
-          <!-- <div
-            class="col-lg-4 col-md-6 portfolio-item isotope-item filter-branding"
-          >
-            <div class="portfolio-content h-100">
-              <img
-                src="assets/img/portfolio/branding-3.jpg"
-                class="img-fluid"
-                alt=""
-              />
-              <div class="portfolio-info">
-                <h4>Branding 3</h4>
-                <p>Lorem ipsum, dolor sit amet consectetur</p>
-                <a
-                  href="assets/img/portfolio/branding-3.jpg"
-                  title="Branding 2"
-                  data-gallery="portfolio-gallery-branding"
-                  class="glightbox preview-link"
-                  ><i class="bi bi-zoom-in"></i
-                ></a>
-                <a
-                  href="portfolio-details.html"
-                  title="More Details"
-                  class="details-link"
-                  ><i class="bi bi-link-45deg"></i
-                ></a>
-              </div>
-            </div>
-          </div> -->
-          <!-- End Portfolio Item -->
-
-          <!-- <div
-            class="col-lg-4 col-md-6 portfolio-item isotope-item filter-books"
-          >
-            <div class="portfolio-content h-100">
-              <img
-                src="assets/img/portfolio/books-3.jpg"
-                class="img-fluid"
-                alt=""
-              />
-              <div class="portfolio-info">
-                <h4>Books 3</h4>
-                <p>Lorem ipsum, dolor sit amet consectetur</p>
-                <a
-                  href="assets/img/portfolio/books-3.jpg"
-                  title="Branding 3"
-                  data-gallery="portfolio-gallery-book"
-                  class="glightbox preview-link"
-                  ><i class="bi bi-zoom-in"></i
-                ></a>
-                <a
-                  href="portfolio-details.html"
-                  title="More Details"
-                  class="details-link"
-                  ><i class="bi bi-link-45deg"></i
-                ></a>
-              </div>
-            </div>
-          </div> -->
-          <!-- End Portfolio Item -->
         </div>
-
-        <!-- End Portfolio Container -->
       </section>
       <!-- /Portfolio Section -->
 
       <!-- Services Section -->
       <section id="services" class="services section">
-        <!-- Section Title -->
         <div class="container section-title" data-aos="fade-up">
           <h2>Services</h2>
         </div>
-
-        <!-- End Section Title -->
 
         <div class="container">
           <div class="row gy-4">
@@ -801,12 +827,11 @@
                 <p class="description">
                   I build responsive and accessible websites from scratch using
                   modern web technologies like HTML5, CSS3, and JavaScript.
-                  Whether it’s a simple landing page or a multi-page site, I
+                  Whether it's a simple landing page or a multi-page site, I
                   ensure clean code and smooth user experience.
                 </p>
               </div>
             </div>
-            <!-- End Service Item -->
 
             <div
               class="col-lg-4 col-md-6 service-item d-flex"
@@ -829,7 +854,6 @@
                 </p>
               </div>
             </div>
-            <!-- End Service Item -->
 
             <div
               class="col-lg-4 col-md-6 service-item d-flex"
@@ -852,7 +876,6 @@
                 </p>
               </div>
             </div>
-            <!-- End Service Item -->
 
             <div
               class="col-lg-4 col-md-6 service-item d-flex"
@@ -875,7 +898,6 @@
                 </p>
               </div>
             </div>
-            <!-- End Service Item -->
 
             <div
               class="col-lg-4 col-md-6 service-item d-flex"
@@ -897,7 +919,6 @@
                 </p>
               </div>
             </div>
-            <!-- End Service Item -->
           </div>
         </div>
       </section>
@@ -905,29 +926,14 @@
 
       <!-- Contact Section -->
       <section id="contact" class="contact section">
-        <!-- Section Title -->
         <div class="container section-title" data-aos="fade-up">
           <h2>Contact</h2>
         </div>
-        <!-- End Section Title -->
 
         <div class="container" data-aos="fade-up" data-aos-delay="100">
           <div class="row gy-4">
             <div class="col-lg-5">
               <div class="info-wrap">
-                <!-- <div
-                  class="info-item d-flex"
-                  data-aos="fade-up"
-                  data-aos-delay="200"
-                >
-                  <i class="bi bi-geo-alt flex-shrink-0"></i>
-                  <div>
-                    <h3>Address</h3>
-                    <p>Enugu City, Nigeria</p>
-                  </div>
-                </div> -->
-                <!-- End Info Item -->
-
                 <div
                   class="info-item d-flex"
                   data-aos="fade-up"
@@ -939,7 +945,6 @@
                     <p>+234 9014 1934 75</p>
                   </div>
                 </div>
-                <!-- End Info Item -->
 
                 <div
                   class="info-item d-flex"
@@ -952,16 +957,6 @@
                     <p>victornnamani651@gmail.com</p>
                   </div>
                 </div>
-                <!-- End Info Item -->
-
-                <!-- <iframe
-                  src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d48389.78314118045!2d-74.006138!3d40.710059!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89c25a22a3bda30d%3A0xb89d1fe6bc499443!2sDowntown%20Conference%20Center!5e0!3m2!1sen!2sus!4v1676961268712!5m2!1sen!2sus"
-                  frameborder="0"
-                  style="border: 0; width: 100%; height: 270px"
-                  allowfullscreen=""
-                  loading="lazy"
-                  referrerpolicy="no-referrer-when-downgrade"
-                ></iframe> -->
               </div>
             </div>
 
@@ -1028,8 +1023,6 @@
                 </div>
               </form>
             </div>
-
-            <!-- End Contact Form -->
           </div>
         </div>
       </section>
@@ -1082,7 +1075,6 @@
         form.addEventListener("submit", function (e) {
           e.preventDefault();
 
-          // Show loading
           loading.classList.remove("d-none");
           errorMessage.classList.add("d-none");
           sentMessage.classList.add("d-none");
@@ -1099,12 +1091,11 @@
               if (response.ok) {
                 const toast = document.getElementById("toast-success");
                 toast.classList.remove("d-none");
-                setTimeout(() => toast.classList.add("show"), 100); // trigger animation
+                setTimeout(() => toast.classList.add("show"), 100);
 
-                // Auto-hide after 4 seconds
                 setTimeout(() => {
                   toast.classList.remove("show");
-                  setTimeout(() => toast.classList.add("d-none"), 500); // wait for fade-out
+                  setTimeout(() => toast.classList.add("d-none"), 500);
                 }, 4000);
                 form.reset();
               } else {
@@ -1124,6 +1115,4 @@
       });
     </script>
   </body>
-
-  <!-- Mirrored from themewagon.github.io/iPortfolio/ by HTTrack Website Copier/3.x [XR&CO'2014], Wed, 19 Feb 2025 19:38:11 GMT -->
 </html>
