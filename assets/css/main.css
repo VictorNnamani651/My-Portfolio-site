@@ -806,6 +806,18 @@ section,
   overflow: hidden;
 }
 
+.portfolio .portfolio-content .portfolio-card-link {
+  position: absolute;
+  inset: 0;
+  z-index: 2;
+  cursor: pointer;
+}
+
+.portfolio .portfolio-content .portfolio-card-link:focus-visible {
+  outline: 2px solid var(--accent-color);
+  outline-offset: -2px;
+}
+
 .portfolio .portfolio-content img {
   transition: 0.3s;
 }
@@ -818,6 +830,11 @@ section,
   transition: all ease-in-out 0.3s;
   background: rgba(0, 0, 0, 0.6);
   padding: 15px;
+  pointer-events: none;
+}
+
+.portfolio .portfolio-content .portfolio-info a {
+  pointer-events: auto;
 }
 
 .portfolio .portfolio-content .portfolio-info h4 {
