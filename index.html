@@ -225,6 +225,95 @@
       .download-resume-btn i {
         font-size: 1.1em;
       }
+
+      /* Project Cards */
+      .portfolio .portfolio-content {
+        display: flex;
+        flex-direction: column;
+        height: 100%;
+        background: var(--surface-color);
+        border-radius: 12px;
+        overflow: hidden;
+        box-shadow: 0 4px 18px rgba(0, 0, 0, 0.08);
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
+      }
+
+      .portfolio .portfolio-content:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 12px 28px rgba(0, 0, 0, 0.14);
+      }
+
+      .portfolio .portfolio-image {
+        position: relative;
+        overflow: hidden;
+      }
+
+      .portfolio .portfolio-caption {
+        padding: 20px;
+        display: flex;
+        flex-direction: column;
+        flex: 1;
+      }
+
+      .portfolio .portfolio-caption h3 {
+        font-size: 19px;
+        font-weight: 700;
+        margin: 0 0 4px;
+        color: var(--heading-color);
+      }
+
+      .portfolio .portfolio-caption .cat {
+        display: inline-block;
+        font-size: 12px;
+        font-weight: 600;
+        text-transform: uppercase;
+        letter-spacing: 0.06em;
+        color: var(--accent-color);
+        margin-bottom: 12px;
+      }
+
+      .portfolio .portfolio-caption .desc {
+        position: static;
+        font-size: 14.5px;
+        line-height: 1.6;
+        color: color-mix(in srgb, var(--default-color), transparent 25%);
+        margin: 0 0 14px;
+        text-align: left;
+        font-weight: 400;
+      }
+
+      .portfolio .tech-tags {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 6px;
+        margin-bottom: 18px;
+      }
+
+      .portfolio .tech-tags span {
+        font-size: 11.5px;
+        font-weight: 500;
+        padding: 4px 10px;
+        border-radius: 50px;
+        background: color-mix(in srgb, var(--accent-color), transparent 88%);
+        color: var(--accent-color);
+      }
+
+      .portfolio .view-details {
+        margin-top: auto;
+        align-self: flex-start;
+        font-weight: 600;
+        font-size: 14px;
+        color: var(--accent-color);
+        text-decoration: none;
+        display: inline-flex;
+        align-items: center;
+        gap: 6px;
+        transition: gap 0.2s ease;
+      }
+
+      .portfolio .view-details:hover {
+        gap: 12px;
+      }
     </style>
   </head>
 
@@ -934,339 +1023,485 @@
           data-aos="fade-up"
           data-aos-delay="200"
         >
+          <!-- CashCognizance -->
           <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-app">
             <div class="portfolio-content h-100">
-              <img
-                src="assets/img/portfolio/CashCognizance.jpeg"
-                class="img-fluid portfolio-img-top"
-                alt="CashCognizance project preview"
-              />
-              <a
-                class="portfolio-card-link"
-                href="https://www.cashcognizance.info/"
-                target="_blank"
-                rel="noopener noreferrer"
-                aria-label="Open CashCognizance live project"
-              ></a>
-              <div class="portfolio-info">
-                <h4>Web App</h4>
-                <p>CashCognizance</p>
+              <div class="portfolio-image">
+                <img
+                  src="assets/img/portfolio/CashCognizance.webp"
+                  class="img-fluid portfolio-img-top"
+                  alt="CashCognizance project preview"
+                />
                 <a
-                  href="assets/img/portfolio/CashCognizance.jpeg"
-                  title="CashCognizance"
-                  data-gallery="portfolio-gallery-projects"
-                  class="glightbox preview-link"
-                  ><i class="bi bi-zoom-in"></i
+                  class="portfolio-card-link"
+                  href="portfolio-details.html#cashcognizance"
+                  aria-label="View CashCognizance project details"
                 ></a>
+                <div class="portfolio-info">
+                  <a
+                    href="assets/img/portfolio/CashCognizance.webp"
+                    title="CashCognizance"
+                    data-gallery="portfolio-gallery-projects"
+                    class="glightbox preview-link"
+                    ><i class="bi bi-zoom-in"></i
+                  ></a>
+                  <a
+                    href="https://www.cashcognizance.info/"
+                    title="Visit Live Site"
+                    class="details-link"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    ><i class="bi bi-link-45deg"></i
+                  ></a>
+                </div>
+              </div>
+              <div class="portfolio-caption">
+                <h3>CashCognizance</h3>
+                <span class="cat">Web App</span>
+                <p class="desc">
+                  A full-stack cryptocurrency analytics platform serving
+                  real-time market data, automated PDF reports, and an
+                  AI-powered tweet engine, with secure role-based user
+                  management.
+                </p>
+                <div class="tech-tags">
+                  <span>Next.js 16</span><span>TypeScript</span
+                  ><span>PostgreSQL</span><span>NextAuth</span>
+                </div>
                 <a
-                  href="https://www.cashcognizance.info/"
-                  title="More Details"
-                  class="details-link"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  ><i class="bi bi-link-45deg"></i
-                ></a>
+                  class="view-details"
+                  href="portfolio-details.html#cashcognizance"
+                  >View details <i class="bi bi-arrow-right"></i></a
+                >
               </div>
             </div>
           </div>
 
+          <!-- Joesy Housing Estate -->
           <div
             class="col-lg-4 col-md-6 portfolio-item isotope-item filter-product"
           >
             <div class="portfolio-content h-100">
-              <img
-                src="assets/img/portfolio/joesyHousing.jpeg"
-                class="img-fluid portfolio-img-top"
-                alt="Joesy Housing Estate project preview"
-              />
-              <a
-                class="portfolio-card-link"
-                href="https://joesyhousingestate.vercel.app/"
-                target="_blank"
-                rel="noopener noreferrer"
-                aria-label="Open Joesy Housing Estate live project"
-              ></a>
-              <div class="portfolio-info">
-                <h4>Website</h4>
-                <p>Joesy Housing Estate</p>
+              <div class="portfolio-image">
+                <img
+                  src="assets/img/portfolio/joesyHousing.webp"
+                  class="img-fluid portfolio-img-top"
+                  alt="Joesy Housing Estate project preview"
+                />
                 <a
-                  href="assets/img/portfolio/joesyHousing.jpeg"
-                  title="Joesy Housing Estate"
-                  data-gallery="portfolio-gallery-projects"
-                  class="glightbox preview-link"
-                  ><i class="bi bi-zoom-in"></i
+                  class="portfolio-card-link"
+                  href="portfolio-details.html#joesy-housing"
+                  aria-label="View Joesy Housing Estate project details"
                 ></a>
+                <div class="portfolio-info">
+                  <a
+                    href="assets/img/portfolio/joesyHousing.webp"
+                    title="Joesy Housing Estate"
+                    data-gallery="portfolio-gallery-projects"
+                    class="glightbox preview-link"
+                    ><i class="bi bi-zoom-in"></i
+                  ></a>
+                  <a
+                    href="https://joesyhousingestate.vercel.app/"
+                    title="Visit Live Site"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    class="details-link"
+                    ><i class="bi bi-link-45deg"></i
+                  ></a>
+                </div>
+              </div>
+              <div class="portfolio-caption">
+                <h3>Joesy Housing Estate</h3>
+                <span class="cat">Website</span>
+                <p class="desc">
+                  A multi-page real estate website for a property management
+                  company, featuring 10+ service categories, a founder profile,
+                  animated UI, and a map-integrated contact form.
+                </p>
+                <div class="tech-tags">
+                  <span>React 19</span><span>Tailwind CSS 4</span
+                  ><span>Framer Motion</span><span>Vite</span>
+                </div>
                 <a
-                  href="https://joesyhousingestate.vercel.app/"
-                  title="More Details"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  class="details-link"
-                  ><i class="bi bi-link-45deg"></i
-                ></a>
+                  class="view-details"
+                  href="portfolio-details.html#joesy-housing"
+                  >View details <i class="bi bi-arrow-right"></i></a
+                >
               </div>
             </div>
           </div>
 
+          <!-- TechMykel -->
           <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-app">
             <div class="portfolio-content h-100">
-              <img
-                src="assets/img/portfolio/techmykel.PNG"
-                class="img-fluid portfolio-img-top"
-                alt="TechMykel project preview"
-              />
-              <a
-                class="portfolio-card-link"
-                href="https://techmykel.vercel.app/"
-                target="_blank"
-                rel="noopener noreferrer"
-                aria-label="Open TechMykel live project"
-              ></a>
-              <div class="portfolio-info">
-                <h4>Web App</h4>
-                <p>TechMykel</p>
+              <div class="portfolio-image">
+                <img
+                  src="assets/img/portfolio/techmykel.webp"
+                  class="img-fluid portfolio-img-top"
+                  alt="TechMykel project preview"
+                />
                 <a
-                  href="assets/img/portfolio/techmykel.PNG"
-                  title="TechMykel"
-                  data-gallery="portfolio-gallery-projects"
-                  class="glightbox preview-link"
-                  ><i class="bi bi-zoom-in"></i
+                  class="portfolio-card-link"
+                  href="portfolio-details.html#techmykel"
+                  aria-label="View TechMykel project details"
                 ></a>
+                <div class="portfolio-info">
+                  <a
+                    href="assets/img/portfolio/techmykel.webp"
+                    title="TechMykel"
+                    data-gallery="portfolio-gallery-projects"
+                    class="glightbox preview-link"
+                    ><i class="bi bi-zoom-in"></i
+                  ></a>
+                  <a
+                    href="https://techmykel.vercel.app/"
+                    title="Visit Live Site"
+                    class="details-link"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    ><i class="bi bi-link-45deg"></i
+                  ></a>
+                </div>
+              </div>
+              <div class="portfolio-caption">
+                <h3>TechMykel</h3>
+                <span class="cat">Web App</span>
+                <p class="desc">
+                  A referral and rewards web app with a clean dashboard for
+                  inviting friends, tracking referrals, and managing earnings.
+                </p>
+                <div class="tech-tags">
+                  <span>Next.js</span><span>React</span><span>TypeScript</span
+                  ><span>PostgreSQL</span>
+                </div>
                 <a
-                  href="https://techmykel.vercel.app/"
-                  title="More Details"
-                  class="details-link"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  ><i class="bi bi-link-45deg"></i
-                ></a>
+                  class="view-details"
+                  href="portfolio-details.html#techmykel"
+                  >View details <i class="bi bi-arrow-right"></i></a
+                >
               </div>
             </div>
           </div>
 
+          <!-- ShotGen -->
           <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-app">
             <div class="portfolio-content h-100">
-              <img
-                src="assets/img/portfolio/ShotGen.jpeg"
-                class="img-fluid"
-                alt="ShotGen project preview"
-              />
-              <a
-                class="portfolio-card-link"
-                href="https://shot-gen-ui.vercel.app/"
-                target="_blank"
-                rel="noopener noreferrer"
-                aria-label="Open ShotGen live project"
-              ></a>
-              <div class="portfolio-info">
-                <h4>Web App</h4>
-                <p>ShotGen</p>
-                <span class="portfolio-tag">Front end only</span>
+              <div class="portfolio-image">
+                <img
+                  src="assets/img/portfolio/ShotGen.webp"
+                  class="img-fluid portfolio-img-top"
+                  alt="ShotGen project preview"
+                />
                 <a
-                  href="assets/img/portfolio/ShotGen.jpeg"
-                  title="ShotGen"
-                  data-gallery="portfolio-gallery-projects"
-                  class="glightbox preview-link"
-                  ><i class="bi bi-zoom-in"></i
+                  class="portfolio-card-link"
+                  href="portfolio-details.html#shotgen"
+                  aria-label="View ShotGen project details"
                 ></a>
+                <div class="portfolio-info">
+                  <span class="portfolio-tag">Front end only</span>
+                  <a
+                    href="assets/img/portfolio/ShotGen.webp"
+                    title="ShotGen"
+                    data-gallery="portfolio-gallery-projects"
+                    class="glightbox preview-link"
+                    ><i class="bi bi-zoom-in"></i
+                  ></a>
+                  <a
+                    href="https://shot-gen-ui.vercel.app/"
+                    title="Visit Live Site"
+                    class="details-link"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    ><i class="bi bi-link-45deg"></i
+                  ></a>
+                </div>
+              </div>
+              <div class="portfolio-caption">
+                <h3>ShotGen</h3>
+                <span class="cat">Web App · Front end</span>
+                <p class="desc">
+                  The frontend for an AI video-generation SaaS — text-to-video
+                  and image-to-video flows with live status polling, style
+                  presets, and a full project dashboard.
+                </p>
+                <div class="tech-tags">
+                  <span>Next.js 16</span><span>React 19</span
+                  ><span>Tailwind CSS 4</span>
+                </div>
                 <a
-                  href="https://shot-gen-ui.vercel.app/"
-                  title="More Details"
-                  class="details-link"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  ><i class="bi bi-link-45deg"></i
-                ></a>
+                  class="view-details"
+                  href="portfolio-details.html#shotgen"
+                  >View details <i class="bi bi-arrow-right"></i></a
+                >
               </div>
             </div>
           </div>
 
+          <!-- E-Learning Website -->
           <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-app">
             <div class="portfolio-content h-100">
-              <img
-                src="assets/img/portfolio/e-learning-sitee.jpg"
-                class="img-fluid"
-                alt="E-Learning Website project preview"
-              />
-              <a
-                class="portfolio-card-link"
-                href="https://e-learning-tau-three.vercel.app/"
-                target="_blank"
-                rel="noopener noreferrer"
-                aria-label="Open E-Learning Website live project"
-              ></a>
-              <div class="portfolio-info">
-                <h4>Website</h4>
-                <p>E-Learning Website</p>
+              <div class="portfolio-image">
+                <img
+                  src="assets/img/portfolio/e-learning-sitee.webp"
+                  class="img-fluid portfolio-img-top"
+                  alt="E-Learning Website project preview"
+                />
                 <a
-                  href="assets/img/portfolio/e-learning-sitee.jpg"
-                  title="Website"
-                  data-gallery="portfolio-gallery-app"
-                  class="glightbox preview-link"
-                  ><i class="bi bi-zoom-in"></i
+                  class="portfolio-card-link"
+                  href="portfolio-details.html#e-learning"
+                  aria-label="View E-Learning Website project details"
                 ></a>
+                <div class="portfolio-info">
+                  <a
+                    href="assets/img/portfolio/e-learning-sitee.webp"
+                    title="E-Learning Website"
+                    data-gallery="portfolio-gallery-app"
+                    class="glightbox preview-link"
+                    ><i class="bi bi-zoom-in"></i
+                  ></a>
+                  <a
+                    href="https://e-learning-tau-three.vercel.app/"
+                    title="Visit Live Site"
+                    class="details-link"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    ><i class="bi bi-link-45deg"></i
+                  ></a>
+                </div>
+              </div>
+              <div class="portfolio-caption">
+                <h3>E-Learning Website</h3>
+                <span class="cat">Website</span>
+                <p class="desc">
+                  A responsive e-learning site with course listings, backed by a
+                  JSON Server API on Render to simulate real course data.
+                </p>
+                <div class="tech-tags">
+                  <span>React</span><span>CSS3</span><span>JSON Server</span
+                  ><span>Render</span>
+                </div>
                 <a
-                  href="https://e-learning-tau-three.vercel.app/"
-                  title="More Details"
-                  class="details-link"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  ><i class="bi bi-link-45deg"></i
-                ></a>
+                  class="view-details"
+                  href="portfolio-details.html#e-learning"
+                  >View details <i class="bi bi-arrow-right"></i></a
+                >
               </div>
             </div>
           </div>
 
+          <!-- SunnySide Agency Landing Page -->
           <div
             class="col-lg-4 col-md-6 portfolio-item isotope-item filter-product"
           >
             <div class="portfolio-content h-100">
-              <img
-                src="https://res.cloudinary.com/dz209s6jk/image/upload/f_auto,q_auto,w_700/Challenges/wqzotbyfysz9pbfk9jus.jpg"
-                class="img-fluid"
-                alt="SunnySide Agency landing page preview"
-              />
-              <a
-                class="portfolio-card-link"
-                href="https://agency-landing-page-lyart.vercel.app/"
-                target="_blank"
-                rel="noopener noreferrer"
-                aria-label="Open SunnySide Agency Landing Page live project"
-              ></a>
-              <div class="portfolio-info">
-                <h4>Landing Page</h4>
-                <p>SunnySide Agency Landing Page</p>
+              <div class="portfolio-image">
+                <img
+                  src="https://res.cloudinary.com/dz209s6jk/image/upload/f_auto,q_auto,w_700/Challenges/wqzotbyfysz9pbfk9jus.jpg"
+                  class="img-fluid portfolio-img-top"
+                  alt="SunnySide Agency landing page preview"
+                />
                 <a
-                  href="assets/img/portfolio/agency-landing-page.webp"
-                  title="Landing Page"
-                  data-gallery="portfolio-gallery-product"
-                  class="glightbox preview-link"
-                  ><i class="bi bi-zoom-in"></i
+                  class="portfolio-card-link"
+                  href="portfolio-details.html#sunnyside-agency"
+                  aria-label="View SunnySide Agency Landing Page details"
                 ></a>
+                <div class="portfolio-info">
+                  <a
+                    href="assets/img/portfolio/agency-landing-page.webp"
+                    title="SunnySide Agency Landing Page"
+                    data-gallery="portfolio-gallery-product"
+                    class="glightbox preview-link"
+                    ><i class="bi bi-zoom-in"></i
+                  ></a>
+                  <a
+                    href="https://agency-landing-page-lyart.vercel.app/"
+                    title="Visit Live Site"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    class="details-link"
+                    ><i class="bi bi-link-45deg"></i
+                  ></a>
+                </div>
+              </div>
+              <div class="portfolio-caption">
+                <h3>SunnySide Agency</h3>
+                <span class="cat">Landing Page</span>
+                <p class="desc">
+                  A vibrant agency landing page built pixel-perfect to a
+                  Frontend Mentor design spec, with a responsive layout and
+                  interactive mobile navigation.
+                </p>
+                <div class="tech-tags">
+                  <span>HTML5</span><span>CSS3</span><span>JavaScript</span>
+                </div>
                 <a
-                  href="https://agency-landing-page-lyart.vercel.app/"
-                  title="More Details"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  class="details-link"
-                  ><i class="bi bi-link-45deg"></i
-                ></a>
+                  class="view-details"
+                  href="portfolio-details.html#sunnyside-agency"
+                  >View details <i class="bi bi-arrow-right"></i></a
+                >
               </div>
             </div>
           </div>
 
+          <!-- Base Apparel coming soon page -->
           <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-app">
             <div class="portfolio-content h-100">
-              <img
-                src="https://res.cloudinary.com/dz209s6jk/image/upload/f_auto,q_auto,w_700/Challenges/oxwdbpj64r1au0gp1frc.jpg"
-                class="img-fluid"
-                alt="Base Apparel coming soon page preview"
-              />
-              <a
-                class="portfolio-card-link"
-                href="https://base-apparel-sigma-five.vercel.app/"
-                target="_blank"
-                rel="noopener noreferrer"
-                aria-label="Open Base Apparel coming soon page live project"
-              ></a>
-              <div class="portfolio-info">
-                <h4>Page/UI Comp</h4>
-                <p>Base Apparel coming soon page</p>
+              <div class="portfolio-image">
+                <img
+                  src="https://res.cloudinary.com/dz209s6jk/image/upload/f_auto,q_auto,w_700/Challenges/oxwdbpj64r1au0gp1frc.jpg"
+                  class="img-fluid portfolio-img-top"
+                  alt="Base Apparel coming soon page preview"
+                />
                 <a
-                  href="https://res.cloudinary.com/dz209s6jk/image/upload/f_auto,q_auto,w_700/Challenges/oxwdbpj64r1au0gp1frc.jpg"
-                  title="Page"
-                  data-gallery="portfolio-gallery-app"
-                  class="glightbox preview-link"
-                  ><i class="bi bi-zoom-in"></i
+                  class="portfolio-card-link"
+                  href="portfolio-details.html#base-apparel"
+                  aria-label="View Base Apparel coming soon page details"
                 ></a>
+                <div class="portfolio-info">
+                  <a
+                    href="https://res.cloudinary.com/dz209s6jk/image/upload/f_auto,q_auto,w_700/Challenges/oxwdbpj64r1au0gp1frc.jpg"
+                    title="Base Apparel coming soon page"
+                    data-gallery="portfolio-gallery-app"
+                    class="glightbox preview-link"
+                    ><i class="bi bi-zoom-in"></i
+                  ></a>
+                  <a
+                    href="https://base-apparel-sigma-five.vercel.app/"
+                    title="Visit Live Site"
+                    class="details-link"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    ><i class="bi bi-link-45deg"></i
+                  ></a>
+                </div>
+              </div>
+              <div class="portfolio-caption">
+                <h3>Base Apparel</h3>
+                <span class="cat">Coming Soon Page</span>
+                <p class="desc">
+                  A responsive "coming soon" page with client-side email
+                  validation and error states, built to a Frontend Mentor
+                  challenge spec.
+                </p>
+                <div class="tech-tags">
+                  <span>HTML5</span><span>CSS3</span><span>JavaScript</span>
+                </div>
                 <a
-                  href="https://base-apparel-sigma-five.vercel.app/"
-                  title="More Details"
-                  class="details-link"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  ><i class="bi bi-link-45deg"></i
-                ></a>
+                  class="view-details"
+                  href="portfolio-details.html#base-apparel"
+                  >View details <i class="bi bi-arrow-right"></i></a
+                >
               </div>
             </div>
           </div>
 
+          <!-- Product preview card component -->
           <div
             class="col-lg-4 col-md-6 portfolio-item isotope-item filter-books"
           >
             <div class="portfolio-content h-100">
-              <img
-                src="https://res.cloudinary.com/dz209s6jk/image/upload/f_auto,q_auto,w_700/Challenges/d0bm3lh8bp36gyi3jiop.jpg"
-                class="img-fluid"
-                alt="Product preview card component"
-              />
-              <a
-                class="portfolio-card-link"
-                href="https://product-preview-card-one-amber.vercel.app/"
-                target="_blank"
-                rel="noopener noreferrer"
-                aria-label="Open Product preview card component live project"
-              ></a>
-              <div class="portfolio-info">
-                <h4>UI Component</h4>
-                <p>Product preview card component</p>
+              <div class="portfolio-image">
+                <img
+                  src="https://res.cloudinary.com/dz209s6jk/image/upload/f_auto,q_auto,w_700/Challenges/d0bm3lh8bp36gyi3jiop.jpg"
+                  class="img-fluid portfolio-img-top"
+                  alt="Product preview card component"
+                />
                 <a
-                  href="https://res.cloudinary.com/dz209s6jk/image/upload/f_auto,q_auto,w_700/Challenges/d0bm3lh8bp36gyi3jiop.jpg"
-                  title="UI Component"
-                  data-gallery="portfolio-gallery-book"
-                  class="glightbox preview-link"
-                  ><i class="bi bi-zoom-in"></i
+                  class="portfolio-card-link"
+                  href="portfolio-details.html#product-preview-card"
+                  aria-label="View Product preview card component details"
                 ></a>
+                <div class="portfolio-info">
+                  <a
+                    href="https://res.cloudinary.com/dz209s6jk/image/upload/f_auto,q_auto,w_700/Challenges/d0bm3lh8bp36gyi3jiop.jpg"
+                    title="Product preview card component"
+                    data-gallery="portfolio-gallery-book"
+                    class="glightbox preview-link"
+                    ><i class="bi bi-zoom-in"></i
+                  ></a>
+                  <a
+                    href="https://product-preview-card-one-amber.vercel.app/"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    title="Visit Live Site"
+                    class="details-link"
+                    ><i class="bi bi-link-45deg"></i
+                  ></a>
+                </div>
+              </div>
+              <div class="portfolio-caption">
+                <h3>Product Preview Card</h3>
+                <span class="cat">UI Component</span>
+                <p class="desc">
+                  A responsive product preview card component matching a
+                  Frontend Mentor design, with adaptive layout for mobile and
+                  desktop.
+                </p>
+                <div class="tech-tags">
+                  <span>HTML5</span><span>CSS3</span>
+                </div>
                 <a
-                  href="https://product-preview-card-one-amber.vercel.app/"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  title="More Details"
-                  class="details-link"
-                  ><i class="bi bi-link-45deg"></i
-                ></a>
+                  class="view-details"
+                  href="portfolio-details.html#product-preview-card"
+                  >View details <i class="bi bi-arrow-right"></i></a
+                >
               </div>
             </div>
           </div>
 
+          <!-- Recipe page -->
           <div
             class="col-lg-4 col-md-6 portfolio-item isotope-item filter-branding"
           >
             <div class="portfolio-content h-100">
-              <img
-                src="https://res.cloudinary.com/dz209s6jk/image/upload/f_auto,q_auto,w_700/Challenges/sogk9gtrzrmsf2rzcj63.jpg"
-                class="img-fluid"
-                alt="Recipe page UI component preview"
-              />
-              <a
-                class="portfolio-card-link"
-                href="https://recipe-page-five-psi.vercel.app/"
-                target="_blank"
-                rel="noopener noreferrer"
-                aria-label="Open Recipe page live project"
-              ></a>
-              <div class="portfolio-info">
-                <h4>UI Component</h4>
-                <p>Recipe page</p>
+              <div class="portfolio-image">
+                <img
+                  src="https://res.cloudinary.com/dz209s6jk/image/upload/f_auto,q_auto,w_700/Challenges/sogk9gtrzrmsf2rzcj63.jpg"
+                  class="img-fluid portfolio-img-top"
+                  alt="Recipe page UI component preview"
+                />
                 <a
-                  href="https://res.cloudinary.com/dz209s6jk/image/upload/f_auto,q_auto,w_700/Challenges/sogk9gtrzrmsf2rzcj63.jpg"
-                  title="UI Component"
-                  data-gallery="portfolio-gallery-branding"
-                  class="glightbox preview-link"
-                  ><i class="bi bi-zoom-in"></i
+                  class="portfolio-card-link"
+                  href="portfolio-details.html#recipe-page"
+                  aria-label="View Recipe page details"
                 ></a>
+                <div class="portfolio-info">
+                  <a
+                    href="https://res.cloudinary.com/dz209s6jk/image/upload/f_auto,q_auto,w_700/Challenges/sogk9gtrzrmsf2rzcj63.jpg"
+                    title="Recipe page"
+                    data-gallery="portfolio-gallery-branding"
+                    class="glightbox preview-link"
+                    ><i class="bi bi-zoom-in"></i
+                  ></a>
+                  <a
+                    href="https://recipe-page-five-psi.vercel.app/"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    title="Visit Live Site"
+                    class="details-link"
+                    ><i class="bi bi-link-45deg"></i
+                  ></a>
+                </div>
+              </div>
+              <div class="portfolio-caption">
+                <h3>Recipe Page</h3>
+                <span class="cat">UI Component</span>
+                <p class="desc">
+                  A semantic, responsive recipe page with structured content and
+                  clean typography, built to a Frontend Mentor challenge spec.
+                </p>
+                <div class="tech-tags">
+                  <span>HTML5</span><span>CSS3</span>
+                </div>
                 <a
-                  href="https://recipe-page-five-psi.vercel.app/"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  title="More Details"
-                  class="details-link"
-                  ><i class="bi bi-link-45deg"></i
-                ></a>
+                  class="view-details"
+                  href="portfolio-details.html#recipe-page"
+                  >View details <i class="bi bi-arrow-right"></i></a
+                >
               </div>
             </div>
           </div>
-
         </div>
       </section>
       <!-- /Portfolio Section -->

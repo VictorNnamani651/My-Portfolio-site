@@ -1,0 +1,621 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <title>Project Details — Victor Nnamani</title>
+    <meta
+      name="description"
+      content="Detailed case studies of projects built by Victor Nnamani, full-stack web developer."
+    />
+    <meta name="author" content="Victor Nnamani" />
+
+    <!-- Favicon -->
+    <link rel="icon" href="assets/img/favicon.svg" type="image/svg+xml" />
+
+    <!-- Fonts -->
+    <link href="https://fonts.googleapis.com/" rel="preconnect" />
+    <link href="https://fonts.gstatic.com/" rel="preconnect" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&amp;family=Poppins:wght@400;500;600;700&amp;family=Raleway:wght@400;500;600;700&amp;display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- Vendor CSS Files -->
+    <link
+      href="assets/vendor/bootstrap/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <link
+      href="assets/vendor/bootstrap-icons/bootstrap-icons.css"
+      rel="stylesheet"
+    />
+
+    <!-- Main CSS File -->
+    <link href="assets/css/main.css" rel="stylesheet" />
+
+    <style>
+      body.details-page {
+        background: var(--background-color);
+        color: var(--default-color);
+      }
+
+      .details-topbar {
+        position: sticky;
+        top: 0;
+        z-index: 50;
+        background: color-mix(in srgb, var(--background-color), transparent 5%);
+        backdrop-filter: blur(8px);
+        border-bottom: 1px solid
+          color-mix(in srgb, var(--default-color), transparent 88%);
+      }
+
+      .details-topbar .inner {
+        max-width: 1000px;
+        margin: 0 auto;
+        padding: 14px 20px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 16px;
+      }
+
+      .details-topbar .brand {
+        font-family: var(--heading-font, "Raleway", sans-serif);
+        font-weight: 700;
+        font-size: 18px;
+        color: var(--heading-color);
+        text-decoration: none;
+      }
+
+      .details-topbar .back-link {
+        display: inline-flex;
+        align-items: center;
+        gap: 8px;
+        font-weight: 600;
+        font-size: 14px;
+        color: var(--accent-color);
+        text-decoration: none;
+      }
+
+      .details-topbar .back-link:hover {
+        gap: 12px;
+      }
+
+      .details-wrap {
+        max-width: 1000px;
+        margin: 0 auto;
+        padding: 40px 20px 80px;
+      }
+
+      .details-wrap .eyebrow {
+        text-transform: uppercase;
+        letter-spacing: 0.1em;
+        font-size: 13px;
+        font-weight: 600;
+        color: var(--accent-color);
+        margin-bottom: 8px;
+      }
+
+      .details-wrap h1 {
+        font-size: clamp(28px, 5vw, 42px);
+        font-weight: 700;
+        color: var(--heading-color);
+        margin-bottom: 14px;
+      }
+
+      .details-wrap .lede {
+        font-size: 17px;
+        line-height: 1.7;
+        max-width: 760px;
+        color: color-mix(in srgb, var(--default-color), transparent 15%);
+        margin-bottom: 22px;
+      }
+
+      .details-actions {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 12px;
+        margin-bottom: 34px;
+      }
+
+      .btn-primary-cta,
+      .btn-ghost-cta {
+        display: inline-flex;
+        align-items: center;
+        gap: 8px;
+        padding: 11px 26px;
+        border-radius: 50px;
+        font-weight: 600;
+        font-size: 15px;
+        text-decoration: none;
+        transition: all 0.25s ease;
+      }
+
+      .btn-primary-cta {
+        background: var(--accent-color);
+        color: #fff;
+        box-shadow: 0 4px 15px rgba(20, 157, 221, 0.3);
+      }
+
+      .btn-primary-cta:hover {
+        background: color-mix(in srgb, var(--accent-color), black 15%);
+        transform: translateY(-2px);
+        color: #fff;
+      }
+
+      .btn-ghost-cta {
+        border: 2px solid
+          color-mix(in srgb, var(--default-color), transparent 80%);
+        color: var(--default-color);
+      }
+
+      .btn-ghost-cta:hover {
+        border-color: var(--accent-color);
+        color: var(--accent-color);
+      }
+
+      .details-hero-img {
+        width: 100%;
+        border-radius: 14px;
+        box-shadow: 0 14px 40px rgba(0, 0, 0, 0.16);
+        margin-bottom: 44px;
+      }
+
+      .details-grid {
+        display: grid;
+        grid-template-columns: 2fr 1fr;
+        gap: 44px;
+      }
+
+      @media (max-width: 768px) {
+        .details-grid {
+          grid-template-columns: 1fr;
+          gap: 30px;
+        }
+      }
+
+      .details-body h2 {
+        font-size: 22px;
+        font-weight: 700;
+        color: var(--heading-color);
+        margin: 0 0 16px;
+      }
+
+      .details-body p {
+        line-height: 1.75;
+        margin-bottom: 18px;
+      }
+
+      .details-body ul.highlights {
+        list-style: none;
+        padding: 0;
+        margin: 0 0 10px;
+      }
+
+      .details-body ul.highlights li {
+        position: relative;
+        padding-left: 30px;
+        margin-bottom: 14px;
+        line-height: 1.65;
+      }
+
+      .details-body ul.highlights li::before {
+        content: "\F26B";
+        font-family: "bootstrap-icons";
+        position: absolute;
+        left: 0;
+        top: 1px;
+        color: var(--accent-color);
+        font-size: 17px;
+      }
+
+      .details-aside .aside-card {
+        background: var(--surface-color);
+        border-radius: 12px;
+        padding: 24px;
+        box-shadow: 0 4px 18px rgba(0, 0, 0, 0.08);
+        margin-bottom: 22px;
+      }
+
+      .details-aside h3 {
+        font-size: 14px;
+        text-transform: uppercase;
+        letter-spacing: 0.06em;
+        color: color-mix(in srgb, var(--default-color), transparent 40%);
+        margin: 0 0 14px;
+      }
+
+      .details-aside .meta-row {
+        display: flex;
+        justify-content: space-between;
+        gap: 12px;
+        padding: 8px 0;
+        border-bottom: 1px solid
+          color-mix(in srgb, var(--default-color), transparent 90%);
+        font-size: 14.5px;
+      }
+
+      .details-aside .meta-row:last-child {
+        border-bottom: none;
+      }
+
+      .details-aside .meta-row span:first-child {
+        color: color-mix(in srgb, var(--default-color), transparent 40%);
+      }
+
+      .details-aside .meta-row span:last-child {
+        font-weight: 600;
+        color: var(--heading-color);
+        text-align: right;
+      }
+
+      .details-aside .stack-tags {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 7px;
+      }
+
+      .details-aside .stack-tags span {
+        font-size: 12.5px;
+        font-weight: 500;
+        padding: 5px 12px;
+        border-radius: 50px;
+        background: color-mix(in srgb, var(--accent-color), transparent 88%);
+        color: var(--accent-color);
+      }
+
+      .details-notfound {
+        text-align: center;
+        padding: 80px 20px;
+      }
+
+      .details-notfound h1 {
+        margin-bottom: 16px;
+      }
+    </style>
+  </head>
+
+  <body class="details-page">
+    <header class="details-topbar">
+      <div class="inner">
+        <a href="index.html" class="brand">Victor Nnamani</a>
+        <a href="index.html#portfolio" class="back-link">
+          <i class="bi bi-arrow-left"></i> Back to Projects
+        </a>
+      </div>
+    </header>
+
+    <main id="details-root">
+      <!-- Populated by JS -->
+    </main>
+
+    <script>
+      const PROJECTS = {
+        cashcognizance: {
+          title: "CashCognizance",
+          category: "Web App",
+          eyebrow: "Full-Stack Platform",
+          live: "https://www.cashcognizance.info/",
+          image: "assets/img/portfolio/CashCognizance.webp",
+          role: "Solo Full-Stack Developer",
+          timeline: "2025 – Present",
+          context: "Rheingold (Remote)",
+          lede: "A full-stack cryptocurrency analytics platform delivering real-time market data, automated reporting, and AI-powered content to retail crypto investors.",
+          overview:
+            "CashCognizance is a production crypto-analytics platform I architected and deployed end to end — from PostgreSQL schema design through 25+ RESTful API endpoints to a polished, server-rendered Next.js interface. It combines live market data, an automated PDF reporting pipeline, and an AI-driven content engine behind a secure, role-based authentication system.",
+          highlights: [
+            "Architected and deployed a full-stack platform serving real-time market data, automated reporting, and AI-generated content.",
+            "Built a Next.js 16 + TypeScript application with server-side rendering, 25+ RESTful API endpoints, and a PostgreSQL database for users, newsletters, and analytics.",
+            "Implemented secure authentication with NextAuth v4, role-based access control, bcrypt password hashing, and middleware-protected admin routes.",
+            "Engineered automated PDF report generation with React-PDF, dynamic chart rendering, and Vercel Blob storage with secure access control for 30+ historical reports.",
+            "Built an AI-powered tweet engine generating market-analysis content and SVG-based branded images with sentiment-driven styling.",
+          ],
+          stack: [
+            "Next.js 16",
+            "React",
+            "TypeScript",
+            "PostgreSQL",
+            "NextAuth v4",
+            "React-PDF",
+            "Vercel Blob",
+            "Tailwind CSS",
+          ],
+        },
+
+        "joesy-housing": {
+          title: "Joesy Housing Estate",
+          category: "Website",
+          eyebrow: "Real Estate Website",
+          live: "https://joesyhousingestate.vercel.app/",
+          image: "assets/img/portfolio/joesyHousing.webp",
+          role: "Freelance Frontend Developer",
+          timeline: "2024",
+          context: "Freelance Client",
+          lede: "A comprehensive multi-page real estate website for a full-service property management company offering investment, development, and consultancy services.",
+          overview:
+            "Joesy Housing Estate is a responsive, mobile-first marketing site I built for a property management company. It spans six main pages and showcases 10+ service categories with animated UI, a dynamic navigation system, and an integrated, validated contact experience backed by Google Maps and Formspree.",
+          highlights: [
+            "Developed a responsive, mobile-first website using React 19, React Router, Tailwind CSS 4, and Vite with smooth page transitions and animations via Framer Motion and AOS.",
+            "Implemented a custom typewriter welcome animation with session-based rendering so it shows once per visit, avoiding repetitive loading.",
+            "Built a dynamic navigation system with dropdown menus, active-state management, hover-with-delayed-close, and a fully responsive mobile hamburger menu.",
+            "Designed and developed 6 pages: Home, Who We Are, Founder Profile, Services (10 categories), and Contact — with hero sections, service cards, and founder biography.",
+            "Integrated Google Maps for office location and a Formspree contact form with validation, loading states, and success/error handling.",
+            "Optimized images with WebP for faster loading and integrated social media links throughout the site.",
+          ],
+          stack: [
+            "React 19",
+            "React Router",
+            "Tailwind CSS 4",
+            "Vite",
+            "Framer Motion",
+            "AOS",
+            "Formspree",
+          ],
+        },
+
+        techmykel: {
+          title: "TechMykel",
+          category: "Web App",
+          eyebrow: "Referral & Rewards Platform",
+          live: "https://techmykel.vercel.app/",
+          image: "assets/img/portfolio/techmykel.webp",
+          role: "Developer",
+          timeline: "2025",
+          context: "Web Application",
+          lede: "A full-stack referral and rewards web app with a clean dashboard for inviting friends, tracking referrals, and managing earnings, backed by a PostgreSQL database.",
+          overview:
+            "TechMykel is a full-stack, referral-driven web application centred on a clear, friendly dashboard. Users can refer friends, follow the status of their invitations, and track the rewards they have earned, all backed by a PostgreSQL database and presented through a responsive, modern interface.",
+          highlights: [
+            "Built a responsive dashboard UI for tracking referrals, invitations, and earnings.",
+            "Persisted users, referrals, and rewards in a PostgreSQL database backing the application.",
+            "Designed a clean, conversion-focused landing experience around the core \"refer friends, get paid\" flow.",
+            "Implemented reusable, component-based UI with a consistent design language across the app.",
+            "Ensured a fully responsive layout that adapts smoothly from desktop to mobile.",
+          ],
+          stack: ["Next.js", "React", "TypeScript", "PostgreSQL"],
+        },
+
+        shotgen: {
+          title: "ShotGen",
+          category: "Web App · Front end",
+          eyebrow: "AI Video Generation SaaS",
+          live: "https://shot-gen-ui.vercel.app/",
+          image: "assets/img/portfolio/ShotGen.webp",
+          role: "Frontend Developer",
+          timeline: "2025 – Present",
+          context: "Rheingold (Remote)",
+          lede: "The frontend for an AI video-generation SaaS that lets marketers, creators, and small businesses produce AI-powered marketing videos.",
+          overview:
+            "ShotGen is a SaaS platform for generating AI marketing videos. I developed the complete frontend — a dual-mode (text-to-video and image-to-video) creation flow with real-time status polling, a full management dashboard, authentication, and a modern, gradient-driven interface built on Next.js 16 and Tailwind CSS 4.",
+          highlights: [
+            "Built a dual-mode video generation UI supporting text-to-video and image-to-video workflows with real-time status polling and progress tracking.",
+            "Engineered a responsive, multi-step creation flow with dynamic forms, file uploads with client-side validation (10MB limit; jpg/png/webp), and live preview.",
+            "Implemented prompt composition tools with title-to-prompt generation, style presets (Cinematic, Promo, Social, Minimal, Anime, 3D Render), duration control, and motion presets.",
+            "Developed a full dashboard with project history, video management, search/filtering, and downloads for completed assets.",
+            "Built complete auth flows (login, registration, forgot password) plus billing/pricing pages for the subscription model.",
+            "Created a reusable component architecture and custom React hooks for video lifecycle management with polling and error states.",
+          ],
+          stack: [
+            "Next.js 16",
+            "React 19",
+            "TypeScript 5",
+            "Tailwind CSS 4",
+            "Lucide React",
+            "REST API",
+          ],
+        },
+
+        "e-learning": {
+          title: "E-Learning Website",
+          category: "Website",
+          eyebrow: "Education Marketing Site",
+          live: "https://e-learning-tau-three.vercel.app/",
+          image: "assets/img/portfolio/e-learning-sitee.webp",
+          role: "Frontend Developer",
+          timeline: "2024",
+          context: "Personal / Practice Project",
+          lede: "A responsive e-learning site with course listings, backed by a JSON Server API hosted on Render to simulate real course data.",
+          overview:
+            "An e-learning website presenting courses and learning paths through a modern, responsive layout. Course data is served from a JSON Server backend deployed on Render, simulating a real REST API so the frontend fetches and renders dynamic content rather than hard-coded data.",
+          highlights: [
+            "Built a responsive, mobile-first layout that adapts cleanly across devices.",
+            "Set up a JSON Server backend hosted on Render to simulate a REST API for course data.",
+            "Fetched and rendered course content dynamically from the API, with appropriate loading and empty states.",
+            "Focused on clean, maintainable markup and consistent, accessible styling.",
+          ],
+          stack: ["React", "CSS3", "JSON Server", "Render", "REST API"],
+        },
+
+        "sunnyside-agency": {
+          title: "SunnySide Agency Landing Page",
+          category: "Landing Page",
+          eyebrow: "Frontend Mentor Challenge",
+          live: "https://agency-landing-page-lyart.vercel.app/",
+          image:
+            "https://res.cloudinary.com/dz209s6jk/image/upload/f_auto,q_auto,w_1000/Challenges/wqzotbyfysz9pbfk9jus.jpg",
+          role: "Frontend Developer",
+          timeline: "Challenge",
+          context: "Frontend Mentor",
+          lede: "A vibrant agency landing page built pixel-perfect to a Frontend Mentor design specification.",
+          overview:
+            "A Frontend Mentor challenge focused on translating a professional design spec into a faithful, responsive build — including a colourful hero, alternating feature sections, testimonials, and an interactive mobile navigation.",
+          highlights: [
+            "Recreated the provided design to pixel-perfect accuracy across breakpoints.",
+            "Implemented a fully responsive layout with an interactive mobile navigation toggle.",
+            "Built alternating image/text feature sections and a testimonials grid with clean, semantic markup.",
+          ],
+          stack: ["HTML5", "CSS3", "JavaScript"],
+        },
+
+        "base-apparel": {
+          title: "Base Apparel Coming Soon Page",
+          category: "Coming Soon Page",
+          eyebrow: "Frontend Mentor Challenge",
+          live: "https://base-apparel-sigma-five.vercel.app/",
+          image:
+            "https://res.cloudinary.com/dz209s6jk/image/upload/f_auto,q_auto,w_1000/Challenges/oxwdbpj64r1au0gp1frc.jpg",
+          role: "Frontend Developer",
+          timeline: "Challenge",
+          context: "Frontend Mentor",
+          lede: "A responsive \"coming soon\" page with client-side email validation, built to a Frontend Mentor spec.",
+          overview:
+            "A Frontend Mentor challenge implementing a responsive coming-soon landing page with an email sign-up form. The focus was accurate layout, responsive imagery, and robust client-side form validation with clear error states.",
+          highlights: [
+            "Implemented client-side email validation with inline error messaging.",
+            "Built a responsive layout with art-directed imagery for mobile and desktop.",
+            "Matched the provided design spec across breakpoints.",
+          ],
+          stack: ["HTML5", "CSS3", "JavaScript"],
+        },
+
+        "product-preview-card": {
+          title: "Product Preview Card Component",
+          category: "UI Component",
+          eyebrow: "Frontend Mentor Challenge",
+          live: "https://product-preview-card-one-amber.vercel.app/",
+          image:
+            "https://res.cloudinary.com/dz209s6jk/image/upload/f_auto,q_auto,w_1000/Challenges/d0bm3lh8bp36gyi3jiop.jpg",
+          role: "Frontend Developer",
+          timeline: "Challenge",
+          context: "Frontend Mentor",
+          lede: "A responsive product preview card component matching a Frontend Mentor design.",
+          overview:
+            "A Frontend Mentor component challenge: a product preview card that adapts its layout between a stacked mobile view and a side-by-side desktop view, with attention to typography, spacing, and hover states.",
+          highlights: [
+            "Built a responsive card that switches layout cleanly between mobile and desktop.",
+            "Matched the design's typography, spacing, and colour system precisely.",
+            "Added accessible, well-structured markup and a clear call-to-action button.",
+          ],
+          stack: ["HTML5", "CSS3"],
+        },
+
+        "recipe-page": {
+          title: "Recipe Page",
+          category: "UI Component",
+          eyebrow: "Frontend Mentor Challenge",
+          live: "https://recipe-page-five-psi.vercel.app/",
+          image:
+            "https://res.cloudinary.com/dz209s6jk/image/upload/f_auto,q_auto,w_1000/Challenges/sogk9gtrzrmsf2rzcj63.jpg",
+          role: "Frontend Developer",
+          timeline: "Challenge",
+          context: "Frontend Mentor",
+          lede: "A semantic, responsive recipe page with structured content and clean typography.",
+          overview:
+            "A Frontend Mentor challenge focused on semantic HTML and content structure — a recipe page with preparation steps, an ingredients list, and a nutrition table, styled for readability across devices.",
+          highlights: [
+            "Used semantic, well-structured HTML for recipe content, lists, and the nutrition table.",
+            "Styled the page for strong readability and a responsive layout.",
+            "Matched the provided design spec across breakpoints.",
+          ],
+          stack: ["HTML5", "CSS3"],
+        },
+      };
+
+      function escapeHtml(str) {
+        const div = document.createElement("div");
+        div.textContent = str;
+        return div.innerHTML;
+      }
+
+      function renderProject(p) {
+        document.title = p.title + " — Victor Nnamani";
+
+        const highlights = p.highlights
+          .map((h) => "<li>" + escapeHtml(h) + "</li>")
+          .join("");
+
+        const stack = p.stack
+          .map((s) => "<span>" + escapeHtml(s) + "</span>")
+          .join("");
+
+        return `
+          <div class="details-wrap">
+            <p class="eyebrow">${escapeHtml(p.eyebrow)}</p>
+            <h1>${escapeHtml(p.title)}</h1>
+            <p class="lede">${escapeHtml(p.lede)}</p>
+
+            <div class="details-actions">
+              <a class="btn-primary-cta" href="${p.live}" target="_blank" rel="noopener noreferrer">
+                <i class="bi bi-box-arrow-up-right"></i> Visit Live Site
+              </a>
+              <a class="btn-ghost-cta" href="index.html#portfolio">
+                <i class="bi bi-grid"></i> All Projects
+              </a>
+            </div>
+
+            <img class="details-hero-img" src="${p.image}" alt="${escapeHtml(
+          p.title
+        )} screenshot" />
+
+            <div class="details-grid">
+              <div class="details-body">
+                <h2>Overview</h2>
+                <p>${escapeHtml(p.overview)}</p>
+                <h2>What I Built</h2>
+                <ul class="highlights">${highlights}</ul>
+              </div>
+
+              <aside class="details-aside">
+                <div class="aside-card">
+                  <h3>Project Info</h3>
+                  <div class="meta-row"><span>Category</span><span>${escapeHtml(
+                    p.category
+                  )}</span></div>
+                  <div class="meta-row"><span>Role</span><span>${escapeHtml(
+                    p.role
+                  )}</span></div>
+                  <div class="meta-row"><span>Timeline</span><span>${escapeHtml(
+                    p.timeline
+                  )}</span></div>
+                  <div class="meta-row"><span>Context</span><span>${escapeHtml(
+                    p.context
+                  )}</span></div>
+                </div>
+                <div class="aside-card">
+                  <h3>Tech Stack</h3>
+                  <div class="stack-tags">${stack}</div>
+                </div>
+              </aside>
+            </div>
+          </div>
+        `;
+      }
+
+      function renderNotFound() {
+        return `
+          <div class="details-wrap details-notfound">
+            <h1>Project not found</h1>
+            <p class="lede" style="margin-inline:auto;">
+              The project you're looking for doesn't exist or may have moved.
+            </p>
+            <a class="btn-primary-cta" href="index.html#portfolio">
+              <i class="bi bi-arrow-left"></i> Back to Projects
+            </a>
+          </div>
+        `;
+      }
+
+      function getSlug() {
+        // Prefer the hash (#slug) — it survives clean-URL redirects on any
+        // static host; fall back to the ?project= query param for safety.
+        const hash = window.location.hash.replace(/^#/, "").trim();
+        if (hash) return hash;
+        return new URLSearchParams(window.location.search).get("project");
+      }
+
+      function render() {
+        const slug = getSlug();
+        const project = slug ? PROJECTS[slug] : null;
+        document.getElementById("details-root").innerHTML = project
+          ? renderProject(project)
+          : renderNotFound();
+        window.scrollTo(0, 0);
+      }
+
+      render();
+      // Re-render if the user navigates between projects via hash change.
+      window.addEventListener("hashchange", render);
+    </script>
+  </body>
+</html>
